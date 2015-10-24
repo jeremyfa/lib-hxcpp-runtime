@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "8.0"
   spec.requires_arc = true
 
-  spec.source       = { :http => "https://github.com/jeremyfa/lib-hxcpp-runtime/releases/download/v0.1.0/HXCPPRuntime-Release.framework.zip" }
+  spec.source       = { :http => "https://github.com/jeremyfa/lib-hxcpp-runtime/releases/download/v0.1.0/HXCPPRuntime-Release.zip" }
   
   spec.vendored_frameworks = "projects/ios/HXCPPRuntime/Output/Release-iphoneuniversal/HXCPPRuntime.framework"
 

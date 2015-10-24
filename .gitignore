@@ -1,12 +1,10 @@
 .DS_Store
 build
 projects/ios/HXCPPRuntime/Output
-projects/ios/HXCPPRuntime/HXCPPRuntime.xcodeproj/xcuserdata
-projects/ios/HXCPPRuntime/HXCPPRuntime.xcodeproj/project.xcworkspace/xcuserdata
-projects/ios/HXCPPRuntime/DerivedData
-libs/ios/release/libHXCPPRuntime.a
-libs/ios/debug/libHXCPPRuntime.a
+xcuserdata
+DerivedData
+libHXCPPRuntime.a
 scripts/build.cppia
 export_classes.info
-HXCPPRuntime-Release.framework.zip
-HXCPPRuntime-Debug.framework.zip
+HXCPPRuntime-Release.zip
+HXCPPRuntime-Debug.zip
