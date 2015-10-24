@@ -8,3 +8,5 @@ libs/ios/release/libHXCPPRuntime.a
 libs/ios/debug/libHXCPPRuntime.a
 scripts/build.cppia
 export_classes.info
+HXCPPRuntime-Release.framework.zip
+HXCPPRuntime-Debug.framework.zip
