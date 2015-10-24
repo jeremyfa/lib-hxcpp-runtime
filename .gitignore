@@ -7,3 +7,4 @@ projects/ios/HXCPPRuntime/DerivedData
 libs/ios/release/libHXCPPRuntime.a
 libs/ios/debug/libHXCPPRuntime.a
 scripts/build.cppia
+export_classes.info
