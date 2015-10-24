@@ -1,0 +1,9 @@
+.DS_Store
+build
+projects/ios/HXCPPRuntime/Output
+projects/ios/HXCPPRuntime/HXCPPRuntime.xcodeproj/xcuserdata
+projects/ios/HXCPPRuntime/HXCPPRuntime.xcodeproj/project.xcworkspace/xcuserdata
+projects/ios/HXCPPRuntime/DerivedData
+libs/ios/release/libHXCPPRuntime.a
+libs/ios/debug/libHXCPPRuntime.a
+scripts/build.cppia

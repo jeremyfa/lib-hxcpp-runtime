@@ -1,0 +1,3 @@
+-main HXCPPRuntime
+-lib hx2objc
+-dce no
