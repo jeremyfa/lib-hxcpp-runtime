@@ -1,8 +1,6 @@
--main HXCPPRuntime
+build.hxml
 -D no-compilation
 -D ios
 -D scriptable
--cpp build/hxcpp/ios
--dce no
--lib hx2objc
---macro hx2objc.Macros.export('build/hxcpp/ios/HXCPPRuntimeObjcInterface')
+-cpp build/ios
+--macro hx2objc.Macros.export('build/ios/HXCPPRuntimeObjcInterface')

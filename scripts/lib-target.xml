@@ -1,0 +1,81 @@
+<xml>
+
+<!-- Custom xml file taken from hxcpp/toolchain/haxe-target.xml, but without the cpp files -->
+
+<set name="hxcpp_api_level" value="${HXCPP_API_LEVEL}" unless="hxcpp_api_level" if="HXCPP_API_LEVEL"  />
+
+<files id="hxcpp-depends">
+  <depend name="${HXCPP}/include/hxcpp.h"/>
+  <depend name="${HXCPP}/include/Array.h"/>
+  <depend name="${HXCPP}/include/Dynamic.h"/>
+  <depend name="${HXCPP}/include/hxString.h"/>
+  <depend name="${HXCPP}/include/hxMath.h"/>
+  <depend name="${HXCPP}/include/null.h"/>
+  <depend name="${HXCPP}/include/hx/Class.h"/>
+  <depend name="${HXCPP}/include/Enum.h"/>
+  <depend name="${HXCPP}/include/hx/Debug.h"/>
+  <depend name="${HXCPP}/include/hx/Telemetry.h"/>
+  <depend name="${HXCPP}/include/hx/Object.h"/>
+  <depend name="${HXCPP}/include/hx/Operators.h"/>
+  <depend name="${HXCPP}/include/hx/Macros.h"/>
+  <depend name="${HXCPP}/include/hx/GC.h"/>
+  <depend name="${HXCPP}/include/hx/Tls.h"/>
+  <depend name="${HXCPP}/include/hx/GcTypeInference.h"/>
+  <depend name="${HXCPP}/include/hx/CFFI.h"/>
+  <depend name="${HXCPP}/include/hx/CFFIAPI.h"/>
+  <depend name="${HXCPP}/include/hx/CFFILoader.h"/>
+  <depend name="${HXCPP}/include/hx/StdLibs.h"/>
+  <depend name="${HXCPP}/include/hx/OS.h"/>
+  <depend name="${HXCPP}/include/hx/Unordered.h"/>
+  <depend name="${HXCPP}/include/cpp/Pointer.h"/>
+  <depend name="${HXCPP}/include/hx/Scriptable.h"/>
+  <section unless="HXCPP_LINK_NO_TOOL_DEPENDS" >
+     <depend name="${HXCPP}/toolchain/haxe-target.xml" dateOnly="true" />
+     <depend name="${HXCPP}/toolchain/${toolchain}-toolchain.xml" ifExists="${HXCPP}/toolchain/${toolchain}-toolchain.xml" dateOnly="true" />
+     <depend name="${HXCPP}/hxcpp.n" ifExists="${HXCPP}/hxcpp.n"  dateOnly="true" />
+  </section>
+</files>
+
+<!-- Additional dependencies for haxe target -->
+<files id="haxe">
+  <depend files="hxcpp-depends"/>
+  <options name="Options.txt"/>
+
+  <precompiledheader name="hxcpp" dir="${HXCPP}/include" if="USE_PRECOMPILED_HEADERS"/>
+  <cache value="1" />
+</files>
+
+<target id="default">
+   <target id="haxe"/>
+</target>
+
+<target id="clean" tool="clean">
+  <dir name="obj"/>
+</target>
+
+<set name="EXESUFFIX" value=".exe" if="windows" />
+
+<set name="HAXE_OUTPUT_PART" value="${HAXE_OUTPUT}" unless="HAXE_OUTPUT_PART" />
+
+<set name="HAXE_OUTPUT_FILE" value="${LIBPREFIX}${HAXE_OUTPUT_PART}${DBG}" unless="HAXE_OUTPUT_FILE" />
+
+<target id="haxe" tool="linker" toolid="${haxelink}" output="${HAXE_OUTPUT_FILE}">
+  <files id="haxe"/>
+
+  <options name="Options.txt"/>
+  <ext value="${LIBEXTRA}.a" if="iphoneos" unless="dll_import" />
+  <ext value="${LIBEXTRA}.a" if="iphonesim" unless="dll_import" />
+  <ext value="${LIBEXTRA}.a" if="appletvos" unless="dll_import" />
+  <ext value="${LIBEXTRA}.a" if="appletvsim" unless="dll_import" />
+
+  <section if="android">
+     <ext value="${LIBEXTRA}.so" />
+     <ext value="${LIBEXTRA}.a"  if="static_link" />
+     <ext value="${LIBEXTRA}" if="exe_link" />
+  </section>
+
+  <lib name="-lpthread" if="linux" unless="static_link" />
+  <lib name="-ldl" if="linux" unless="static_link" />
+</target>
+
+</xml>
