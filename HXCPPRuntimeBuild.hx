@@ -14,9 +14,7 @@ class HXCPPRuntimeBuild {
         var build_xml = '
         <files id="haxe">
             <compilerflag value="-fobjc-arc" />
-        	<compilerflag value="-fembed-bitcode" />
-            <compilerflag value="-DENABLE_BITCODE=YES"/>
-            <file name="../../../projects/ios/HXCPPRuntime/HXCPPRuntime/HXObject.mm">
+            <file name="../../projects/ios/HXCPPRuntime/HXCPPRuntime/HXObject.mm">
                 <depend name="$'+'{HXCPP}/include/hx/Macros.h" />
                 <depend name="$'+'{HXCPP}/include/hx/CFFI.h" />
             </file>

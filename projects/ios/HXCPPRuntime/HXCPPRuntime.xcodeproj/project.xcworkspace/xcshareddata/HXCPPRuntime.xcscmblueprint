@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4FA6467B909C200BAA0EDE5B11FB0704FEFD4291",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4FA6467B909C200BAA0EDE5B11FB0704FEFD4291" : 0,
+    "F710167E8BD8F7E11F72FF2C123DE1179D09F768" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "85A6B4D8-B378-4038-9935-53ECC66B6662",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4FA6467B909C200BAA0EDE5B11FB0704FEFD4291" : "lib-hxcpp-runtime\/",
+    "F710167E8BD8F7E11F72FF2C123DE1179D09F768" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HXCPPRuntime",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "projects\/ios\/HXCPPRuntime\/HXCPPRuntime.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jeremyfa\/lib-hxcpp-runtime.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4FA6467B909C200BAA0EDE5B11FB0704FEFD4291"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jeremyfa\/lib-haxe-sample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F710167E8BD8F7E11F72FF2C123DE1179D09F768"
+    }
+  ]
+}
